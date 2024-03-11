@@ -1,9 +1,10 @@
 import dayjs from 'dayjs';
 
 export const generateDate = (
-  month = dayjs().month(),
+  month = 2,
   year = dayjs().year()
 ) => {
+  
   const firstDateofMonth = dayjs().year(year).month(month).startOf('month');
   const lastDateOfMonth = dayjs().year(year).month(month).endOf('month');
 
@@ -27,3 +28,27 @@ export const generateDate = (
 
   return arrayOfDate;
 };
+
+export const generateMonth = () => {
+  const monthArray = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  const month = dayjs().month()
+  return monthArray[month]
+}
+
+export const generateYear = () => {
+  const year = dayjs().year()
+  return year;
+}

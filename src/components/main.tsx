@@ -1,4 +1,4 @@
-import { generateDate } from '../utils/calendar';
+import { generateDate, generateMonth, generateYear} from '../utils/calendar';
 import cn from '../utils/cn';
 
 type Props = {};
@@ -6,11 +6,14 @@ type Props = {};
 export default function main({}: Props) {
   const days = ['Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat'];
   return (
-    <div id='main-container' className='grid place-content-center justify-center items-center'>
-      <div id='header-container'>
-        <h1></h1>
+    <div
+      id="main-container"
+      className="grid place-content-center justify-center items-center "
+    >
+      <div id="header-container" className='grid place-content-center pt-5'>
+        <h1>{generateMonth() } {generateYear()}</h1>
       </div>
-      <div id='calendar-container' className="w-96 h-96">
+      <div id="calendar-container" className="w-96 h-96 px-4">
         <div className="w-full grid grid-cols-7">
           {days.map((day, index) => {
             return (
@@ -45,9 +48,7 @@ export default function main({}: Props) {
           })}
         </div>
       </div>
-      <div id='function-container'>
-
-      </div>
+      <div id="function-container"></div>
     </div>
   );
 }
