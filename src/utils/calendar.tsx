@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
 export const generateDate = (
-  month = 2,
+  month = dayjs().month(),
   year = dayjs().year()
 ) => {
   
