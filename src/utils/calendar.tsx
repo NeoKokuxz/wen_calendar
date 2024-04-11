@@ -29,7 +29,7 @@ export const generateDate = (
   return arrayOfDate;
 };
 
-export const generateMonth = () => {
+export const generateMonth = ( num: number ) => {
   const monthArray = [
     'January',
     'February',
@@ -44,8 +44,7 @@ export const generateMonth = () => {
     'November',
     'December',
   ];
-  const month = dayjs().month()
-  return monthArray[month]
+  return monthArray[num]
 }
 
 export const generateYear = () => {
